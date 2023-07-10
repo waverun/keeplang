@@ -11,7 +11,33 @@
 		50DC5B392A5B4816003119E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC5B382A5B4816003119E8 /* ContentView.swift */; };
 		50DC5B3B2A5B481E003119E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50DC5B3A2A5B481E003119E8 /* Assets.xcassets */; };
 		50DC5B3E2A5B481E003119E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50DC5B3D2A5B481E003119E8 /* Preview Assets.xcassets */; };
+		50DC5B4B2A5B4850003119E8 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DC5B4A2A5B4850003119E8 /* KeyboardViewController.swift */; };
+		50DC5B4F2A5B4850003119E8 /* keepLang.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 50DC5B482A5B4850003119E8 /* keepLang.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50DC5B4D2A5B4850003119E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50DC5B2B2A5B4815003119E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50DC5B472A5B4850003119E8;
+			remoteInfo = keepLang;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50DC5B532A5B4851003119E8 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				50DC5B4F2A5B4850003119E8 /* keepLang.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		50DC5B332A5B4816003119E8 /* KeepLang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepLang.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +45,20 @@
 		50DC5B382A5B4816003119E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		50DC5B3A2A5B481E003119E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50DC5B3D2A5B481E003119E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		50DC5B482A5B4850003119E8 /* keepLang.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = keepLang.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		50DC5B4A2A5B4850003119E8 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		50DC5B4C2A5B4850003119E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		50DC5B302A5B4815003119E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50DC5B452A5B4850003119E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				50DC5B352A5B4816003119E8 /* KeepLang */,
+				50DC5B492A5B4850003119E8 /* keepLang */,
 				50DC5B342A5B4816003119E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				50DC5B332A5B4816003119E8 /* KeepLang.app */,
+				50DC5B482A5B4850003119E8 /* keepLang.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +105,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		50DC5B492A5B4850003119E8 /* keepLang */ = {
+			isa = PBXGroup;
+			children = (
+				50DC5B4A2A5B4850003119E8 /* KeyboardViewController.swift */,
+				50DC5B4C2A5B4850003119E8 /* Info.plist */,
+			);
+			path = keepLang;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +124,34 @@
 				50DC5B2F2A5B4815003119E8 /* Sources */,
 				50DC5B302A5B4815003119E8 /* Frameworks */,
 				50DC5B312A5B4815003119E8 /* Resources */,
+				50DC5B532A5B4851003119E8 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				50DC5B4E2A5B4850003119E8 /* PBXTargetDependency */,
 			);
 			name = KeepLang;
 			productName = KeepLang;
 			productReference = 50DC5B332A5B4816003119E8 /* KeepLang.app */;
 			productType = "com.apple.product-type.application";
+		};
+		50DC5B472A5B4850003119E8 /* keepLang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50DC5B502A5B4851003119E8 /* Build configuration list for PBXNativeTarget "keepLang" */;
+			buildPhases = (
+				50DC5B442A5B4850003119E8 /* Sources */,
+				50DC5B452A5B4850003119E8 /* Frameworks */,
+				50DC5B462A5B4850003119E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = keepLang;
+			productName = keepLang;
+			productReference = 50DC5B482A5B4850003119E8 /* keepLang.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +164,9 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					50DC5B322A5B4815003119E8 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					50DC5B472A5B4850003119E8 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
@@ -116,6 +185,7 @@
 			projectRoot = "";
 			targets = (
 				50DC5B322A5B4815003119E8 /* KeepLang */,
+				50DC5B472A5B4850003119E8 /* keepLang */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +197,13 @@
 			files = (
 				50DC5B3E2A5B481E003119E8 /* Preview Assets.xcassets in Resources */,
 				50DC5B3B2A5B481E003119E8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50DC5B462A5B4850003119E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +219,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		50DC5B442A5B4850003119E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50DC5B4B2A5B4850003119E8 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50DC5B4E2A5B4850003119E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50DC5B472A5B4850003119E8 /* keepLang */;
+			targetProxy = 50DC5B4D2A5B4850003119E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		50DC5B3F2A5B481E003119E8 /* Debug */ = {
@@ -262,6 +355,7 @@
 		50DC5B422A5B481E003119E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +385,7 @@
 		50DC5B432A5B481E003119E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -317,6 +412,56 @@
 			};
 			name = Release;
 		};
+		50DC5B512A5B4851003119E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NRTGJB9J65;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = keepLang/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = keepLang;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Morphicode.KeepLang.keepLang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		50DC5B522A5B4851003119E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NRTGJB9J65;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = keepLang/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = keepLang;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Morphicode.KeepLang.keepLang;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +479,15 @@
 			buildConfigurations = (
 				50DC5B422A5B481E003119E8 /* Debug */,
 				50DC5B432A5B481E003119E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50DC5B502A5B4851003119E8 /* Build configuration list for PBXNativeTarget "keepLang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50DC5B512A5B4851003119E8 /* Debug */,
+				50DC5B522A5B4851003119E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

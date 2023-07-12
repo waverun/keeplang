@@ -73,7 +73,10 @@ class KeyboardViewController: UIInputViewController {
 
         // Add a delete button
         let deleteButton = UIButton(type: .system)
-        deleteButton.setTitle("Delete", for: [])
+        deleteButton.setImage(UIImage(systemName: "delete.left"), for: .normal)
+//        } else {
+//            deleteButton.setTitle("Delete", for: []) // fallback if the image isn't found
+//        }
         deleteButton.sizeToFit()
         deleteButton.frame = CGRect(x: 280, y: 200, width: 80, height: 40)
         deleteButton.addTarget(self, action: #selector(deleteKeyPressed), for: .touchUpInside)
@@ -99,7 +102,11 @@ class KeyboardViewController: UIInputViewController {
 
         // Add a return button
         let returnButton = UIButton(type: .system)
-        returnButton.setTitle("Return", for: [])
+        if let returnImage = UIImage(named: "return-icon") { // replace "return-icon" with the name of your image
+            returnButton.setImage(returnImage, for: .normal)
+        } else {
+            returnButton.setTitle("Return", for: []) // fallback if the image isn't found
+        }
         returnButton.sizeToFit()
         returnButton.frame = CGRect(x: 200, y: 200, width: 80, height: 40)
         returnButton.addTarget(self, action: #selector(returnKeyPressed), for: .touchUpInside)

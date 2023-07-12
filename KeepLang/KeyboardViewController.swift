@@ -78,7 +78,7 @@ class KeyboardViewController: UIInputViewController {
 //            deleteButton.setTitle("Delete", for: []) // fallback if the image isn't found
 //        }
         deleteButton.sizeToFit()
-        deleteButton.frame = CGRect(x: 280, y: 200, width: 80, height: 40)
+        deleteButton.frame = CGRect(x: 280, y: 200, width: 40, height: 40)
         deleteButton.addTarget(self, action: #selector(deleteKeyPressed), for: .touchUpInside)
 
         deleteButton.backgroundColor = .white
@@ -102,13 +102,14 @@ class KeyboardViewController: UIInputViewController {
 
         // Add a return button
         let returnButton = UIButton(type: .system)
-        if let returnImage = UIImage(named: "return-icon") { // replace "return-icon" with the name of your image
-            returnButton.setImage(returnImage, for: .normal)
-        } else {
-            returnButton.setTitle("Return", for: []) // fallback if the image isn't found
-        }
+        returnButton.setImage(UIImage(systemName: "return.right"), for: .normal)
+//        if let returnImage = UIImage(named: "return-icon") { // replace "return-icon" with the name of your image
+//            returnButton.setImage(returnImage, for: .normal)
+//        } else {
+//            returnButton.setTitle("Return", for: []) // fallback if the image isn't found
+//        }
         returnButton.sizeToFit()
-        returnButton.frame = CGRect(x: 200, y: 200, width: 80, height: 40)
+        returnButton.frame = CGRect(x: 200, y: 200, width: 70, height: 40)
         returnButton.addTarget(self, action: #selector(returnKeyPressed), for: .touchUpInside)
 
         returnButton.backgroundColor = .white
